@@ -1,0 +1,52 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.section {
+  width: 100%;
+  background-color: variables.$bg-color;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    padding: 36px 16px 56px 16px;
+
+    @include tablet-portrait {
+      padding: 64px 24px;
+    }
+
+    @include laptop {
+      padding: 80px 0;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0;
+      text-align: center;
+      color: variables.$primary-color;
+      margin-bottom: 40px;
+      text-wrap: balance;
+
+      span {
+        color: variables.$main-color;
+      };
+
+      @include tablet-portrait {
+        font-size: 40px;
+      }
+    }
+
+    .cardsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include laptop {
+        flex-direction: row;
+      }
+    }
+  }
+}

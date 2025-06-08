@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+@mixin mobile-xs {
+  @media (min-width: $breakpoint-mobile-xs) { @content; }
+}
+
+@mixin big-phone {
+  @media (max-width: 450px) { @content; }
+}
+
+// применяется с 768px до max
+@mixin tablet-portrait {
+  @media (min-width: $breakpoint-tablet-portrait) { @content; }
+}
+
+@mixin mon-width-1024 {
+  @media (min-width: 1024px) { @content; }
+}
+
+// применяется с 1440px до max
+@mixin laptop {
+  @media (min-width: $breakpoint-laptop) { @content; }
+}
+
+// <= 359px
+@mixin mobile-xs-up {
+  @media (max-width: 359px) { @content; }
+}
+
+// <= 768px
+@mixin tablet-portrait-up {
+  @media (max-width: $breakpoint-tablet-portrait) { @content; }
+}
+
+// <= 1439
+// применяется с 1440px и выше (до бесконечности)
+@mixin desktop-portrait-up {
+  @media (max-width: 1439px) { @content; }
+}

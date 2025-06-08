@@ -1,0 +1,39 @@
+@use '@/app/utils/_variables.scss' as variables;
+
+.wrapper {
+  overflow-y: scroll;
+  max-height: 800px;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 100px;
+
+  padding: 50px 24px 56px;
+
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: end;
+
+    .customRegion {
+      color: #FFFFFF;
+    }
+
+    .customContacts {
+      a, time {
+        color: #FFFFFF;
+      }
+    }
+
+    .customMessenger {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}

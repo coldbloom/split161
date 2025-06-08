@@ -1,0 +1,29 @@
+@use '@/app/utils/_mixins.scss' as *;
+@use '@/app/utils/variables' as variables;
+.burgerButton {
+  all: unset;
+  box-sizing: border-box; /* Чтобы padding и border не влияли на размеры */
+
+  &:focus {
+    outline: none; /* Убираем стандартный outline при фокусе */
+  }
+
+  /* Дополнительно для кросс-браузерности */
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  // Планшеты (до 768px)
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+.modalPage.modalPage {
+  height: 100%;
+  width: 100%;
+  background-color: variables.$main-color;
+}
+
+.backdrop {
+  top: 80px!important;
+}

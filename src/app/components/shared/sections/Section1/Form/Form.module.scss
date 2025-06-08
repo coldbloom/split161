@@ -1,0 +1,41 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/mixins' as *;
+
+.wrapper {
+  background-color: variables.$bg-color;
+  padding: 24px 24px 40px 24px;
+  border-radius: 16px;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include tablet-portrait {
+    padding: 40px 40px 56px 40px;
+  }
+
+  @include laptop {
+    max-width: 480px;
+  }
+
+  .description {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-align: center;
+    color: variables.$primary-color;
+    text-wrap: pretty;
+
+    @include tablet-portrait {
+      font-size: 40px;
+      text-align: left;
+    }
+
+    @include laptop {
+      font-size: 40px;
+      text-align: left;
+    }
+  }
+}

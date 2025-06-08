@@ -1,0 +1,89 @@
+@use '@/app/utils/_variables' as varibales;
+@use '@/app/utils/mixins' as *;
+
+.sectionWrapper {
+  background-color: varibales.$main-color;
+  display: flex;
+  justify-content: center;
+
+  .contentWrapper {
+    padding: 40px 16px 65px;
+    max-width: 1280px;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include tablet-portrait {
+      padding: 64px 24px;
+    }
+
+    @include laptop {
+      padding: 80px 0;
+      flex-direction: row;
+    }
+  }
+}
+
+.wrapper {
+  align-items: baseline;
+
+  gap: 48px;
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 594px; /* Макс. ширина */
+    aspect-ratio: 320/115; /* Соотношение 320:115 (2.2:1) */
+    max-height: 270px; /* Жесткое ограничение */
+    overflow: hidden; /* Кроп выходящего за границы */
+
+    .image {
+      width: 100%; /* Заполняем всю ширину родителя */
+      height: 100%; /* Заполняем всю высоту родителя */
+      object-fit: contain; /* Сохраняем пропорции изображения */
+      max-width: 594px;
+    }
+  }
+
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet-portrait {
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 120%;
+      letter-spacing: 0;
+      font-weight: 700;
+
+      @include tablet-portrait {
+        font-size: 48px;
+      }
+    }
+
+    .saleWrapper {
+      padding: 4px 16px 4px 8px;
+      background-color: varibales.$hover-color;
+      width: fit-content;
+      border-radius: 333px;
+      gap: 8px;
+
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0;
+
+        @include tablet-portrait {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use '@/app/utils/_mixins.scss' as *;
+
+.wrapper {
+	width: 100%;
+	padding-top: 80px;
+
+  @include laptop {
+    padding-top: 130px;
+  }
+}

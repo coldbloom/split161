@@ -1,0 +1,131 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/mixins' as *;
+
+.embla {
+  margin: auto;
+
+  position: relative;
+
+  .arrowWrapper {
+    appearance: none;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: variables.$bg-color-2;
+    border-radius: 50%;
+    border: none;
+    transform: translateY(-75%); // Добавляем это для вертикального центрирования
+    display: none;
+    cursor: pointer;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  .arrowLeft {
+    left: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-left: 2px solid variables.$primary-color;
+      border-bottom: 2px solid variables.$primary-color;
+      transform: translate(-25%, -50%) rotate(45deg);
+      border-radius: 2px; // Закругляем углы
+    }
+  }
+
+  .arrowRight {
+    right: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid variables.$primary-color;
+      border-top: 2px solid variables.$primary-color;
+      transform: translate(-75%, -50%) rotate(45deg);
+      border-radius: 2px; // Закругляем углы
+    }
+  }
+}
+
+.emblaViewport {
+  overflow: hidden;
+}
+
+.emblaContainer {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  position: relative;
+}
+
+.emblaSlide {
+  height: 260px;
+  width: 260px;
+  transform: translate3d(0, 0, 0);
+  //flex: 0 0 70%;
+  flex: 0 0 auto;
+  min-width: 0;
+  scroll-snap-align: start; // Для правильного выравнивания
+  margin-right: 16px;
+
+  @include tablet-portrait {
+    height: 412px;
+    width: 412px;
+    margin-right: 24px;
+    //flex: 0 0 calc(50% - 16px);
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+}
+
+.emblaDots {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #C6D0D9;
+
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    &.activeDot {
+      background-color: variables.$main-color;
+    }
+  }
+}

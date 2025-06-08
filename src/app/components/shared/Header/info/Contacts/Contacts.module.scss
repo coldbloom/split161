@@ -1,0 +1,49 @@
+@use '@/app/utils/_variables.scss' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.address {
+  align-items: flex-end;
+
+  @include mobile-xs {
+    display: none;
+  }
+
+  @include tablet-portrait {
+    display: flex;
+  }
+
+  &--always-visible {
+    display: flex !important;
+  }
+
+  .workTime {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+
+  .phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+
+    &:hover {
+      color: #2289FF;
+    }
+  }
+
+  .callback {
+    font-size: 14px;
+    font-weight: 700;
+    color: variables.$main-color;
+    letter-spacing: 0;
+    line-height: 130%;
+    text-decoration: underline;
+
+    &:hover {
+      color: #2289FF;
+    }
+  }
+}

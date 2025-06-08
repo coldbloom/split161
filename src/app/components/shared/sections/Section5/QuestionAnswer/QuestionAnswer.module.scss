@@ -1,0 +1,81 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.wrapper {
+  background-color: variables.$bg-color-2;
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  height: fit-content;
+
+  @include tablet-portrait {
+    padding: 32px;
+  }
+
+  .questionWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 16px;
+
+    .questionText {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0;
+      text-align: left;
+
+      @include tablet-portrait {
+        font-size: 20px;
+      }
+    }
+
+    .imageWrapper {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      background-color: variables.$primary-color;
+      border-radius: 50%;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      will-change: transform; // Подсказка браузеру для оптимизации
+      transition: background-color 0.4s ease, transform 1s ease;
+
+      &.open {
+        background-color: variables.$main-color;
+
+        img {
+          rotate: 315deg;
+        }
+      }
+    }
+  }
+
+  .answerWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    will-change: transform; // Подсказка браузеру для оптимизации
+    opacity: 0;
+
+    p {
+      padding-top: 24px;
+      padding-bottom: 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0;
+    }
+
+    &.open {
+      opacity: 1;
+      max-height: 500px; // Значение больше предполагаемой высоты
+    }
+  }
+}

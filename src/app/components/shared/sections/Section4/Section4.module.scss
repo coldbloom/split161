@@ -1,0 +1,17 @@
+@use '@/app/utils/_mixins.scss' as *;
+
+.custom.custom.custom {
+  position: relative;
+  z-index: 2;
+
+  > div {
+    padding-top: 2px;
+    @include tablet-portrait {
+      padding-top: 64px;
+    }
+
+    @include laptop {
+      padding-top: 80px;
+    }
+  }
+}

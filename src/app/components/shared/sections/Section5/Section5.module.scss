@@ -1,0 +1,72 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-align: center;
+  color: variables.$primary-color;
+  margin-bottom: 40px;
+  text-wrap: balance;
+
+  span {
+    color: variables.$main-color;
+  };
+
+  @include tablet-portrait {
+    font-size: 40px;
+  }
+}
+
+.contentWrapper {
+  color: variables.$primary-color;
+
+  .gridWrapper {
+    display: grid;
+    gap: 16px; // Отступ между блоками
+
+    // Мобильная версия (1 колонка)
+    grid-template-columns: 1fr;
+
+    // Десктоп (≥1440px) - 2 колонки
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: dense; // Плотное заполнение
+    }
+
+    @include tablet-portrait {
+      gap: 24px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+
+    background-color: variables.$main-color;
+    width: 100%;
+    height: 76px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+
+    margin-top: 32px;
+    color: #FFFFFF;
+
+    @include tablet-portrait {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+
+    &:active {
+      scale: 0.98;
+    }
+  }
+}

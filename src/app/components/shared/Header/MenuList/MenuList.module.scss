@@ -1,0 +1,30 @@
+.mobileMenuList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: end;
+  list-style: none;
+
+  &.desktop {
+    flex-direction: row;
+
+    .menuLink {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0;
+
+      &:active,&:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .menuLink {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: white;
+  }
+}

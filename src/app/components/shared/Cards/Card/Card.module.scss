@@ -1,0 +1,92 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/mixins' as *;
+
+.wrapper {
+  width: 100%;
+  background-color: variables.$bg-color-2;
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+
+  @include tablet-portrait {
+    padding: 24px 24px 32px 24px;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+
+    @include tablet-portrait {
+      height: 340px;
+      margin-bottom: 16px;
+    }
+
+    @include laptop {
+      height: 252px;
+    }
+
+    .image {
+      object-fit: cover;
+      border-radius: 16px;
+      object-position: top;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 130%;
+    color: variables.$primary-color;
+
+    @include tablet-portrait {
+      font-size: 24px;
+    }
+  }
+
+  .price {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0;
+    color: variables.$primary-color;
+    opacity: .6;
+
+    @include tablet-portrait {
+      font-size: 24px;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: variables.$main-color;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    position: relative; // Для позиционирования псевдоэлемента
+
+    img {
+      transition: transform 0.3s ease;
+    }
+
+    &:active {
+      img {
+        transform: translateX(8px); // Иконка смещается вправо
+        scale: 0.95;
+      }
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.section {
+  background-color: variables.$bg-color-2;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    padding: 56px 16px 0 16px;
+    max-width: 1280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-portrait {
+      padding: 64px 24px 0 24px;
+    }
+
+    @include laptop {
+      padding: 32px 0 0 0;
+      flex-direction: row;
+    }
+
+    .contentLayout {
+
+      @include laptop {
+        height: 100%;
+        padding-right: 32px;
+      }
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0;
+        text-align: center;
+        color: variables.$primary-color;
+        margin-bottom: 32px;
+        text-wrap: balance;
+
+        @include tablet-portrait {
+          margin-bottom: 40px;
+          font-size: 40px;
+        }
+
+        @include laptop {
+          text-align: left;
+          margin-top: 48px;
+        }
+
+        span {
+          color: variables.$main-color;
+        };
+      }
+    }
+
+    .cardsWrapper {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 56px;
+
+      /* Мобильная версия */
+      grid-template-rows: repeat(4, auto);
+
+      /* Десктопная версия */
+      @include tablet-portrait {
+        row-gap: 24px;
+        column-gap: 46px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin-bottom: 34px;
+      }
+    }
+  }
+}
+
+.imagesWrapper {
+  position: relative;
+  width: 100%;
+  height: 396px;
+
+  //@include big-phone {
+  //  height: 500px;
+  //}
+  //
+  @include tablet-portrait {
+    height: 712px;
+  }
+
+  @include laptop {
+    height: 660px;
+  }
+
+  .bg {
+    z-index: 1;
+    //width: 108%!important;
+    //top: -40px!important;
+
+    @include tablet-portrait {
+      height: 716px;
+      width: 100% !important;
+      top: 200px !important;
+    }
+
+    @include laptop {
+      top: 0 !important;
+    }
+  }
+
+  .image {
+    z-index: 2;
+    object-fit: contain;
+
+    @include tablet-portrait {
+      width: 50%;
+    }
+
+    @include laptop {
+      max-width: 520px;
+    }
+  }
+}

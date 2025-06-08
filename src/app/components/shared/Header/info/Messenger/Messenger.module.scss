@@ -1,0 +1,30 @@
+@use '@/app/utils/_mixins.scss' as *;
+
+.messenger {
+  align-items: center;
+  @include mobile-xs {
+    display: none;
+  }
+
+  @include laptop {
+    display: flex;
+  }
+
+  &--always-visible {
+    display: flex !important;
+  }
+
+  .ask {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+
+  .ask_2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+}
