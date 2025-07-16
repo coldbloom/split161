@@ -27,7 +27,7 @@
       z-index: -1; // Изменен z-index
       border-radius: 333px;
       background-size: 400%;
-      animation: animate 30s linear infinite;
+      //animation: animate 30s linear infinite;
       pointer-events: none; // Важно! Делаем псевдоэлементы "прозрачными" для кликов
     }
 
@@ -48,16 +48,16 @@
   }
 }
 
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 300% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
+//@keyframes animate {
+//  0% {
+//    background-position: 0 0;
+//  }
+//
+//  50% {
+//    background-position: 300% 0;
+//  }
+//
+//  100% {
+//    background-position: 0 0;
+//  }
+//}
