@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from "next/image";
-
+import { Form } from './Form'
+import { MainPhone } from "@/app/components/shared/MainPhone";
 import cn from "classnames";
 import s from './Section1.module.scss';
-import { Form } from './Form'
-import { phone, prettyPhone } from '@/app/utils/const';
-import {MainPhone} from "@/app/components/shared/MainPhone";
 
 export const Section1 = () => {
   return (
@@ -15,7 +13,7 @@ export const Section1 = () => {
           <div className={s.imageWrapper}>
             <Image
               src="/conditioner.svg"
-              alt="Кондиционер"
+              alt="сплит"
               className={s.image}
               fill
             />
