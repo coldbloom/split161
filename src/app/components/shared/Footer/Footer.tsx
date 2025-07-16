@@ -7,7 +7,7 @@ export const Footer = () => (
     <div className={s.wrapper}>
       <Logo className={s.logoFooter}/>
       <div className={s.infoWrapper}>
-        <span>Ледяной Партнер {new Date().getFullYear()}. © Все права защищены.</span>
+        <span>Фриз мастер {new Date().getFullYear()}. © Все права защищены.</span>
         <a href="/documents/privacy-policy.pdf"
            target="_blank"
            rel="noopener noreferrer"

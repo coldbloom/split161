@@ -1,17 +1,26 @@
-$primary-text: #192836;
-
-$z-index-modal-page: 45;
-
-$bg-color: #FFFFFF;
-$bg-color-2: #F5FAFF;
+//$primary-text: #192836;
+//$bg-color: #FFFFFF;
+//$bg-color-2: #F5FAFF;
 //$main-color: #0077FF;
-$secondary-color: #EFF7FF;
-$primary-color: #192836;
-$hover-color: #2289FF;
+//$secondary-color: #EFF7FF;
+//$primary-color: #192836;
+//$hover-color: #2289FF;
+
+
+$primary-text: #0A1A2B;       // Глубокий сине-черный (как ночное небо в мороз)
+$bg-color: #F8FAFC;           // Ледяной белый с легким синим оттенком
+$bg-color-2: #E6F2FF;         // Очень светлый голубой (как тонкий лед)
+$main-color: #0066CC;         // Холодный синий (как глубокая замерзшая вода)
+$secondary-color: #E0F0FF;    // Светлый ледяной голубой
+$hover-color: #0088FF;        // Более яркий ледяной акцент
+$primary-color: #0A1A2B;
+$accent-color: #00B4FF;       // Морозный голубой (для акцентов)
+$border-color: #C0D8E8;       // Цвет инея
 
 // Брейкпоинты
 $breakpoint-mobile-xs: 0;
 $breakpoint-tablet-portrait: 768px;
 $breakpoint-laptop: 1440px;
 
-$main-color: red;
+// z-индексы
+$z-index-modal-page: 45;

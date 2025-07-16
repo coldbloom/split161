@@ -4,7 +4,7 @@ import { PhoneForm } from './PhoneForm';
 export const Form = () => {
   return (
     <div className={s.wrapper}>
-      <p className={s.description}>Заказать звонок в 1 клик</p>
+      <p className={s.description}>Заказать звонок в 1&nbsp;клик</p>
       <PhoneForm />
     </div>
   );

@@ -19,7 +19,7 @@
       color: variables.$primary-color;
 
       &:focus-within {
-        outline: 2px solid variables.$main-color; // Изменяем границу при фокусе на вложенном input
+        outline: 3px solid variables.$main-color; // Изменяем границу при фокусе на вложенном input
       }
 
       &::placeholder {
@@ -27,7 +27,7 @@
       }
 
       &.error {
-        outline: 2px solid red; // Изменяем границу при фокусе на вложенном input
+        outline: 3px solid red; // Изменяем границу при фокусе на вложенном input
       }
     }
 
@@ -63,7 +63,7 @@
     }
 
     &.disabled {
-      background-color: #EBEBE4;
+      background-color: rgba(variables.$main-color, .5);
       cursor: not-allowed;
       pointer-events: none; // Запрещаем любые взаимодействия
     }

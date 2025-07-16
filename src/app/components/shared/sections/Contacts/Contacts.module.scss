@@ -6,23 +6,30 @@
   display: grid;
   // Мобильные (по умолчанию - одна колонка)
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 60px;
 
   @include tablet-portrait {
     grid-template-columns: repeat(2, 1fr);
 
     // Третий блок переносим на новую строку
-    > div:nth-child(3) {
-      grid-column: span 2; // Занимает всю ширину
-    }
+    //> div:nth-child(3) {
+    //  grid-column: span 2; // Занимает всю ширину
+    //}
   }
 
-  @include laptop {
-    grid-template-columns: repeat(3, 1fr);
+  //@include laptop {
+  //  grid-template-columns: repeat(3, 1fr);
+  //
+  //  // Возвращаем третий блок в общий поток
+  //  div:nth-child(3) {
+  //    grid-column: auto;
+  //  }
+  //}
 
-    // Возвращаем третий блок в общий поток
-    div:nth-child(3) {
-      grid-column: auto;
+  .centerWrapper {
+    @include tablet-portrait {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -81,7 +88,11 @@
   }
 
   .gap {
-    gap: 32px;
+    gap: 16px;
+
+    @include tablet-portrait {
+      gap: 32px;
+    }
   }
 }
 

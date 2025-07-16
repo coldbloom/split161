@@ -19,7 +19,7 @@ const discounts: CardData[] = [
 export const Section2 = () => (
   <Cards
     id="promotions"
-    title={<><span>Скидки</span> на ремонт и чистку кондиционеров в ДНР</>}
+    title={<><span>Скидки</span> на ремонт и чистку сплит-систем в <strong>Ростове-на-Дону</strong></>}
     data={discounts}
   />
 )

@@ -9,13 +9,26 @@ const roboto = Roboto({
   variable: "--font-roboto", // CSS переменная для использования
 });
 
-export const metadata: Metadata = {
+  export const metadata: Metadata = {
   title: {
-    template: 'Ледяной Партнер',
-    default: 'Ледяной Партнер - Ремонт и обслуживание кондиционеров'
+    template: '%s | Фриз Мастер - Ремонт кондиционеров в Ростове-на-Дону',
+    default: 'Фриз Мастер - Ремонт и обслуживание сплит систем и кондиционеров в Ростове-на-Дону | Гарантия'
   },
-  description: 'Профессиональный монтаж и обслуживание кондиционеров и холодильного оборудования. Гарантия качества, доступные цены, работаем в Донецке, ДНР.',
-  keywords: ['кондиционер', 'кондиционеры', 'ремонт кондиционеров', 'обслуживание кондиционеров', 'кондей', 'промышленные холодильные установки'],
+  description: 'Профессиональный ремонт, установка и обслуживание кондиционеров и сплит-систем в Ростове-на-Дону и Батайске. Выезд мастера в день обращения. Гарантия до 3 лет. Работаем с бытовыми и промышленными системами.',
+  keywords: [
+    'ремонт кондиционеров Ростов-на-Дону',
+    'установка сплит-систем Ростов',
+    'обслуживание кондиционеров Ростов',
+    'чистка кондиционеров',
+    'заправка фреоном Ростов',
+    'ремонт сплит-систем',
+    'монтаж кондиционеров Ростов',
+    'промышленные кондиционеры',
+    'срочный ремонт кондиционеров',
+    'диагностика кондиционеров Ростов',
+    'холодильные установки Ростов',
+    'ремонт кондиционеров Батайск'
+  ],
   // Основные метатеги
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://holodniypartner.ru/'),
 
@@ -28,16 +41,16 @@ export const metadata: Metadata = {
 
   // Open Graph (для соцсетей)
   openGraph: {
-    title: 'Ледяной Партнер - Ремонт и обслуживание кондиционеров',
-    description: 'Профессиональные услуги по ремонту и обслуживанию кондиционеров',
+    title: 'Ремонт и обслуживание кондиционеров в Ростове-на-Дону | Фриз Мастер',
+    description: 'Профессиональный ремонт и обслуживание кондиционеров и сплит-систем в Ростове-на-Дону. Оперативный выезд мастера, гарантия на все работы.',
     url: 'https://holodniypartner.ru/',
-    siteName: 'Ледяной Партнер',
+    siteName: 'Фриз Мастер',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://holodniypartner.ru/'}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://holodniypartner.ru/'}/og-image.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Ледяной Партнер',
+        alt: 'Ремонт кондиционеров в Ростове-на-Дону',
       },
     ],
     locale: 'ru_RU',
@@ -65,8 +78,25 @@ export const metadata: Metadata = {
     yandex: 'ваш-yandex-verification-code',
   },
 
+  // Добавляем дополнительные метатеги через other
   other: {
     "font-roboto": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+    "geo.region": "RU-ROS",
+    "geo.placename": "Ростов-на-Дону",
+    "geo.position": "47.2357;39.7015",
+    "ICBM": "47.2357, 39.7015",
+    "yandex-verification": "verification-code",
+    "google-site-verification": "verification-code",
+    "author": "Фриз Мастер",
+    "format-detection": "telephone=yes",
+    // "business:contact_data:street_address": "Ваш адрес",
+    "business:contact_data:locality": "Ростов-на-Дону",
+    "business:contact_data:region": "Ростовская область",
+    // "business:contact_data:postal_code": "Ваш индекс",
+    "business:contact_data:country_name": "Россия",
+    "business:contact_data:phone_number": "+7 (989) 505-27-85",
+    "place:location:latitude": "47.2357",
+    "place:location:longitude": "39.7015",
   },
 };
 

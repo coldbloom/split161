@@ -14,6 +14,6 @@ export const Region = ({ visible = false, className }: RegionProps) => (
     style={{gap: '4px'}}
   >
     <Image src={visible ? 'geo-white.svg' : 'geo.svg'} alt="Регион" width={24} height={24} />
-    <p itemProp="addressLocality" className={s.text}>Донецк, ДНР, Макеевка</p>
+    <p itemProp="addressLocality" className={s.text}>Ростов-на-Дону, Батайск, Аксай</p>
   </div>
 );

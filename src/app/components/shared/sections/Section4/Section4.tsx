@@ -5,17 +5,17 @@ import s from './Section4.module.scss';
 const services: CardData[] = [
   {
     url: 'discount-1.svg',
-    title: 'Мойка кондиционеров',
+    title: 'Мойка кондиционеров и сплит систем',
     price: 1500,
   },
   {
     url: 'discount-2.svg',
-    title: 'Заправка кондиционеров',
+    title: 'Заправка кондиционеров и сплит систем фреоном',
     price: 1500,
   },
   {
     url: 'discount-3.svg',
-    title: 'Ремонт кондиционеров',
+    title: 'Ремонт кондиционеров и сплит систем',
     price: 1500,
   }
 ]

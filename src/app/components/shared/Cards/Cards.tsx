@@ -6,6 +6,7 @@ import cn from "classnames";
 export type CardData = {
   url: string;
   title: string;
+  title2?: string;
   price?: number;
 };
 
@@ -20,7 +21,7 @@ export const Cards = ({ title, data, className, id }: CardsProps) => {
   return (
     <section id={id} className={cn(s.section, className)}>
       <div className={s.content}>
-        <h3 className={s.title}>{title}</h3>
+        <p className={s.title}>{title}</p>
         <div className={s.cardsWrapper}>
           {data.map((card: CardData) => (<Card key={card.url} {...card} />))}
         </div>
