@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.scss";
+import { YandexMetrika } from "@/app/utils/YandexMetrika";
 
 const roboto = Roboto({
   weight: ['400', '500', '700'], // Укажите нужные начертания
@@ -30,7 +31,7 @@ const roboto = Roboto({
     'ремонт кондиционеров Батайск'
   ],
   // Основные метатеги
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://holodniypartner.ru/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://split161.vercel.app'),
 
   alternates: {
     canonical: '/', // Основная (каноническая) версия страницы
@@ -43,11 +44,11 @@ const roboto = Roboto({
   openGraph: {
     title: 'Ремонт и обслуживание кондиционеров в Ростове-на-Дону | Фриз Мастер',
     description: 'Профессиональный ремонт и обслуживание кондиционеров и сплит-систем в Ростове-на-Дону. Оперативный выезд мастера, гарантия на все работы.',
-    url: 'https://holodniypartner.ru/',
+    url: 'https://split161.vercel.app/',
     siteName: 'Фриз Мастер',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://holodniypartner.ru/'}/og-image.jpeg`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://split161.vercel.app/'}/og-image.jpeg`,
         width: 1200,
         height: 630,
         alt: 'Ремонт кондиционеров в Ростове-на-Дону',
@@ -109,6 +110,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${roboto.className}`}>
         {children}
+        <YandexMetrika />
       </body>
     </html>
   );
