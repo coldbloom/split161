@@ -5,6 +5,7 @@
 }
 
 .location {
+  gap: 4px;
   @include mobile-xs {
     display: none;
   }
@@ -17,10 +18,19 @@
     display: flex !important;
   }
 
+  &.withDescription {
+    flex-direction: column;
+    gap: 0;
+  }
+
   .text {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0;
+
+    &.bold-text {
+      font-weight: bold;
+    }
   }
 }

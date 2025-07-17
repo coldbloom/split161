@@ -22,8 +22,17 @@
   height: 100%;
   width: 100%;
   background-color: variables.$main-color;
+
+  @include tablet-portrait {
+    display: none;
+  }
 }
 
 .backdrop {
   top: 80px!important;
+
+  // Планшеты (до 768px)
+  @include tablet-portrait {
+    display: none;
+  }
 }

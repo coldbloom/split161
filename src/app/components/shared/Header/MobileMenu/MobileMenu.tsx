@@ -10,7 +10,7 @@ export const MobileMenu = () => {
         <MenuList />
       </nav>
       <section className={s.infoWrapper}>
-        <Region visible={true} className={s.customRegion} />
+        <Region visible={true} className={s.customRegion} withDescription={true} />
 
         <Contacts visible={true} className={s.customContacts} />
 

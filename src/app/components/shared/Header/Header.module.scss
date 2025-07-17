@@ -34,6 +34,10 @@
   max-width: 1280px;
   height: 80px;
   padding: 0 24px;
+
+  @include laptop {
+    padding: 0;
+  }
 }
 
 .name {
