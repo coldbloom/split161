@@ -38,7 +38,7 @@ OpenGraph-изображениях (og:image) Sitemap.xml
 NEXT_PUBLIC_API_URL
 /api — если API роуты находятся на том же домене
 
-Если API на другом сервере: полный URL (https://api.holodnipartner.ru)
+Если API на другом сервере: полный URL (https://split161.vercel.app)
 
 
 snap и apt работают глобально из любой директории
