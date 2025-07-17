@@ -76,7 +76,7 @@ const roboto = Roboto({
   // Для верификации в поисковых системах
   verification: {
     google: 'ваш-google-verification-code',
-    yandex: 'ваш-yandex-verification-code',
+    yandex: 'c497c7032dd9a757',
   },
 
   // Добавляем дополнительные метатеги через other
@@ -86,7 +86,7 @@ const roboto = Roboto({
     "geo.placename": "Ростов-на-Дону",
     "geo.position": "47.2357;39.7015",
     "ICBM": "47.2357, 39.7015",
-    "yandex-verification": "verification-code",
+    "yandex-verification": "c497c7032dd9a757",
     "google-site-verification": "verification-code",
     "author": "Фриз Мастер",
     "format-detection": "telephone=yes",
