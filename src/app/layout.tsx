@@ -75,7 +75,7 @@ const roboto = Roboto({
 
   // Для верификации в поисковых системах
   verification: {
-    google: 'ваш-google-verification-code',
+    google: 'WRfHpP8b5lYUkK6LmUNGNlG4FHh62zdnX17nqDbSXuo',
     yandex: 'c497c7032dd9a757',
   },
 
@@ -87,7 +87,7 @@ const roboto = Roboto({
     "geo.position": "47.2357;39.7015",
     "ICBM": "47.2357, 39.7015",
     "yandex-verification": "c497c7032dd9a757",
-    "google-site-verification": "verification-code",
+    "google-site-verification": "WRfHpP8b5lYUkK6LmUNGNlG4FHh62zdnX17nqDbSXuo",
     "author": "Фриз Мастер",
     "format-detection": "telephone=yes",
     // "business:contact_data:street_address": "Ваш адрес",
