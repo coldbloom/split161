@@ -51,11 +51,11 @@ const roboto = Roboto({
   openGraph: {
     title: 'Ремонт и обслуживание кондиционеров в Ростове-на-Дону | Фриз Мастер',
     description: 'Профессиональный ремонт и обслуживание кондиционеров и сплит-систем в Ростове-на-Дону. Оперативный выезд мастера, гарантия на все работы.',
-    url: 'https://split161.vercel.app/',
+    url: 'https://split161.vercel.app',
     siteName: 'Фриз Мастер',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://split161.vercel.app/'}/og-image.jpeg`,
+        url: `https://split161.vercel.app/og_image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Ремонт кондиционеров в Ростове-на-Дону',
