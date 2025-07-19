@@ -24,7 +24,7 @@ export const Section1 = () => {
               <Image src="/sale.svg" alt="Скидка" width={25} height={25}/>
               <p>Скидка 15% на первый заказ</p>
             </div>
-            <h1>Ремонт и обслуживание <strong>сплит&nbsp;систем</strong> и <strong>кондиционеров</strong> в Ростове-на-Дону</h1>
+            <h1>Ремонт и обслуживание <strong>кондиционеров</strong> и <strong>сплит&nbsp;систем</strong> в Ростове-на-Дону</h1>
           </div>
         </div>
 
