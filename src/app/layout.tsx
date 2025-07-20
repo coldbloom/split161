@@ -32,7 +32,7 @@ const roboto = Roboto({
     'ремонт кондиционеров Батайск'
   ],
   // Основные метатеги
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://split161.vercel.app'),
+  metadataBase: new URL('https://split161.vercel.app'),
 
   alternates: {
     canonical: '/', // Основная (каноническая) версия страницы
@@ -43,7 +43,7 @@ const roboto = Roboto({
 
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: 'https://split161.vercel.app/favicon.ico' },
     ]
   },
 
