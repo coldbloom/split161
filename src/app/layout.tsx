@@ -41,12 +41,6 @@ const roboto = Roboto({
     },
   },
 
-  icons: {
-    icon: [
-      { url: 'https://split161.vercel.app/favicon.ico' },
-    ]
-  },
-
   // Open Graph (для соцсетей)
   openGraph: {
     title: 'Ремонт и обслуживание кондиционеров в Ростове-на-Дону | Фриз Мастер',

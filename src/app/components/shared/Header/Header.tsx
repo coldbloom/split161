@@ -14,7 +14,7 @@ type LogoProps = {
 export const Logo = ({ className }: LogoProps) => (
   <a href="/">
     <div className={cn('row', 'items-center', className)} style={{gap: '6px'}}>
-      <Image src="./logo.svg" alt="Компания 'Фриз мастер'" width={46} height={46}/>
+      <Image src="./freeze-master-logo.svg" alt="Компания 'Фриз мастер'" width={46} height={46}/>
       <div className='column' style={{gap: '4px'}}>
         <h2 className={s.name}>Фриз мастер</h2>
         <p className={s.description}>Ремонт, обслуживание, заправка сплит</p>
@@ -28,15 +28,15 @@ export const Header = () => {
     <header>
       <div className={s.layoutHeader}>
         <div className={s.wrapper}>
-          <Logo/>
+          <Logo />
 
-          <Region/>
+          <Region />
 
           {/* Мессенджеры */}
-          <Messenger/>
+          <Messenger />
 
           {/* Контактная информация */}
-          <Contacts/>
+          <Contacts />
 
           {/* Мобильное меню */}
           <BurgerMenu>
