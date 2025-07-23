@@ -1,7 +1,7 @@
 @use '@/app/utils/_variables.scss' as variables;
 @use '@/app/utils/_mixins.scss' as *;
 
-.address {
+.address.address {
   align-items: flex-end;
 
   @include mobile-xs {

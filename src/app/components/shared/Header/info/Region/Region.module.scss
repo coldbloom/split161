@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.location {
+.location.location {
   gap: 4px;
   @include mobile-xs {
     display: none;

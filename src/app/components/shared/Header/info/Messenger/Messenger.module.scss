@@ -1,6 +1,6 @@
 @use '@/app/utils/_mixins.scss' as *;
 
-.messenger {
+.messenger.messenger {
   align-items: center;
   @include mobile-xs {
     display: none;
