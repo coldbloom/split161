@@ -107,10 +107,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(
-    'ROOT LAYOUT работает на:',
-    typeof window === 'undefined' ? 'сервере' : 'клиенте'
-  );
   return (
     <html lang="ru">
       <body className={`${roboto.className}`}>

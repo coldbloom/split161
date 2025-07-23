@@ -7,10 +7,6 @@ import { Region, Messenger, Contacts } from './info';
 import { MenuList } from './MenuList';
 
 export const Header = () => {
-  console.log(
-    '1) components Header работает на:',
-    typeof window === 'undefined' ? 'сервере' : 'клиенте'
-  );
   return (
     <header>
       <div className={s.layoutHeader}>

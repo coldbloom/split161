@@ -6,7 +6,6 @@ import cn from "classnames";
 import {Loader} from "@/app/components/kit/Loader";
 import toast, { Toaster } from 'react-hot-toast';
 
-
 const notify = () => toast.success('Мы свяжемся с вами!', {
   duration: 4000,
   position: 'bottom-center',

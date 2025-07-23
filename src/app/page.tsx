@@ -8,10 +8,6 @@ import { Contacts } from "@/app/components/shared/sections/Contacts";
 import React from "react";
 
 export default function Home() {
-  console.log(
-    '1) Page Home работает на:',
-    typeof window === 'undefined' ? 'сервере' : 'клиенте'
-  );
   return (
     <main>
       <Section1 headingText={<h1>Ремонт и обслуживание <strong>кондиционеров</strong> и <strong>сплит&nbsp;систем</strong> в Ростове-на-Дону</h1>} />
