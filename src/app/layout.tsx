@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.scss";
+import { Header } from "@/app/components/shared";
 import { YandexMetrika } from "@/app/utils/YandexMetrika";
+import { Footer } from "@/app/components/shared/Footer";
 
 const roboto = Roboto({
   weight: ['400', '500', '700'], // Укажите нужные начертания
@@ -105,11 +107,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(
+    'ROOT LAYOUT работает на:',
+    typeof window === 'undefined' ? 'сервере' : 'клиенте'
+  );
   return (
     <html lang="ru">
       <body className={`${roboto.className}`}>
+        <Header />
         {children}
         <YandexMetrika />
+        <Footer />
       </body>
     </html>
   );

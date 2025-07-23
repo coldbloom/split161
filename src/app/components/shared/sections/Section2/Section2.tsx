@@ -20,6 +20,7 @@ export const Section2 = () => (
   <Cards
     id="promotions"
     title={<><span>Скидки</span> на ремонт и чистку сплит-систем в <strong>Ростове-на-Дону</strong></>}
+    titleVariant="h2"
     data={discounts}
   />
 )

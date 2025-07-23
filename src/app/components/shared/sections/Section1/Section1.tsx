@@ -5,13 +5,18 @@ import { MainPhone } from "@/app/components/shared/MainPhone";
 import cn from "classnames";
 import s from './Section1.module.scss';
 
-export const Section1 = () => {
+type Section1Props = {
+  headingText: React.ReactNode | string;
+}
+
+export const Section1 = ({ headingText }: Section1Props) => {
   return (
     <section className={s.sectionWrapper}>
       <div className={s.contentWrapper}>
         <div className={cn('column', s.wrapper)}>
           <div className={s.imageWrapper}>
             <Image
+              unoptimized
               src="/conditioner.svg"
               alt="сплит"
               className={s.image}
@@ -21,10 +26,10 @@ export const Section1 = () => {
           <MainPhone />
           <div className={s.textWrapper}>
             <div className={cn(s.saleWrapper, 'row')}>
-              <Image src="/sale.svg" alt="Скидка" width={25} height={25}/>
+              <Image unoptimized src="/sale.svg" alt="Скидка" width={25} height={25}/>
               <p>Скидка 15% на первый заказ</p>
             </div>
-            <h1>Ремонт и обслуживание <strong>кондиционеров</strong> и <strong>сплит&nbsp;систем</strong> в Ростове-на-Дону</h1>
+            {headingText}
           </div>
         </div>
 

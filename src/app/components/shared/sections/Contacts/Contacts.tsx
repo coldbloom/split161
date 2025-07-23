@@ -77,11 +77,11 @@ export const Contacts = () => {
             </div>
             <div>
               <div className={cn(s.workTime, 'row')}>
-                <Image src="/clock-icon.svg" alt="" width={24} height={24}/>
+                <Image unoptimized src="/clock-icon.svg" alt="" width={24} height={24}/>
                 <span className={s.text}>Пн-вс: 09:00-20:00</span>
               </div>
               <a href="mailto:friz-master@mail.ru" className={cn(s.workTime, 'row')}>
-                <Image src="/mail-icon.svg" alt="" width={24} height={24}/>
+                <Image unoptimized src="/mail-icon.svg" alt="" width={24} height={24}/>
                 <span className={s.text}>friz-master@mail.ru</span>
               </a>
             </div>

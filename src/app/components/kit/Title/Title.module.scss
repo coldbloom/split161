@@ -1,0 +1,21 @@
+@use '@/app/utils/variables' as variables;
+@use '@/app/utils/_mixins.scss' as *;
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-align: center;
+  color: variables.$primary-color;
+  margin-bottom: 40px;
+  text-wrap: balance;
+
+  span {
+    color: variables.$main-color;
+  };
+
+  @include tablet-portrait {
+    font-size: 40px;
+  }
+}

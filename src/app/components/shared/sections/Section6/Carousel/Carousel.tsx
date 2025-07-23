@@ -35,7 +35,7 @@ export const Carousel = ({ slides, options }: CarouselProps) => {
           {slides.map(url => (
             <div className={s.emblaSlide} key={url}>
               <div className={s.imageWrapper}>
-                <Image src={url} alt="рабочий процесс" fill={true} className={s.image} />
+                <Image unoptimized src={url} alt="рабочий процесс" fill={true} className={s.image} />
               </div>
             </div>
           ))}

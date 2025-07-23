@@ -47,7 +47,7 @@ export const Section3 = () => {
         </div>
 
         <div className={s.imagesWrapper}>
-          <Image src='/bg-bratic.svg' alt="background" fill className={s.bg}/>
+          <Image unoptimized src='/bg-bratic.svg' alt="background" fill className={s.bg}/>
           <Image src='/bratic.png' alt="Наш сотрудник" fill className={s.image}/>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import { Logo } from '../Header/Header';
-import s from './Footer.module.scss';
+import { Logo } from '@/app/components/shared/Logo';
 import Image from "next/image";
+import s from './Footer.module.scss';
 
 export const Footer = () => (
   <footer className={s.footer}>
@@ -18,7 +18,7 @@ export const Footer = () => (
       <div className="developer-credits">
         <a href="https://t.me/konstankk" target="_blank" rel="noopener"
            aria-label="Ссылка на контакт разработчика (откроется в новой вкладке)">
-          <Image src="/codecake.svg" alt="Разработано в CODECAKE" width={235} height={37}/>
+          <Image unoptimized src="/codecake.svg" alt="Разработано в CODECAKE" width={235} height={37}/>
         </a>
       </div>
     </div>

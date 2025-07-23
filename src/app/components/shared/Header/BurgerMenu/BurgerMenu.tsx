@@ -1,8 +1,8 @@
 'use client'
 
-import React, { PropsWithChildren, createContext } from 'react';
+import { useState, PropsWithChildren, createContext } from 'react';
 import Image from "next/image";
-import {ModalPageWindow} from "@/app/components/kit/ModalPageWindow";
+import { ModalPageWindow } from "@/app/components/kit/ModalPageWindow";
 
 import s from './BurgerMenu.module.scss';
 
@@ -13,7 +13,7 @@ export const MenuContext = createContext({
 
 
 export const BurgerMenu = ({ children }: PropsWithChildren) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <button
@@ -24,7 +24,8 @@ export const BurgerMenu = ({ children }: PropsWithChildren) => {
         onClick={() => setOpen(prev => !prev)}
       >
         <Image
-          src={open ? 'Close.svg' : 'Hamburger.svg'}
+          unoptimized
+          src={open ? '/close.svg' : '/hamburger.svg'}
           alt="Меню"
           width={40}
           height={40}

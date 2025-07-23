@@ -1,6 +1,7 @@
 import { Layout } from "@/app/components/shared/Layout";
 import s  from './Section5.module.scss';
 import { QuestionAnswer, QuestionAnswerProps } from './QuestionAnswer';
+import { Title } from '@/app/components/kit/Title';
 
 const questionData: QuestionAnswerProps[] = [
   {
@@ -66,7 +67,7 @@ const questionData: QuestionAnswerProps[] = [
 export const Section5 = () => {
   return (
     <Layout style={{ paddingTop: 0, paddingBottom: 0 }}>
-      <h3 className={s.title}>У вас <span>остались вопросы?</span> Мы на них ответим :)</h3>
+      <Title variant="p">У вас <span>остались вопросы?</span> Мы на них ответим :)</Title>
       <div className={s.contentWrapper}>
         <div className={s.gridWrapper}>
           {questionData.map((item, i) => <QuestionAnswer key={i} {...item} />)}

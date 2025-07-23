@@ -22,27 +22,27 @@ export const MenuList = ({ variant }: MenuListProps) => {
   return (
     <ul className={cn(s.mobileMenuList, {[s.desktop]: variant === 'desktop'})}>
       <LiClose>
-        <Link href="#promotions" scroll={true} className={s.menuLink}>
+        <Link href="/#promotions" scroll={true} className={s.menuLink}>
           Акции
         </Link>
       </LiClose>
       <LiClose>
-        <Link href="#services" scroll={true} className={s.menuLink}>
+        <Link href="/#services" scroll={true} className={s.menuLink}>
           Ремонт
         </Link>
       </LiClose>
       <LiClose>
-        <Link href="#services" scroll={true} className={s.menuLink}>
+        <Link href="/#services" scroll={true} className={s.menuLink}>
           Обслуживание
         </Link>
       </LiClose>
       <LiClose>
-        <Link href="#services" scroll={true} className={s.menuLink}>
-          Мойка
+        <Link href="/cleaning" scroll={true} className={s.menuLink}>
+          Чистка сплит-систем
         </Link>
       </LiClose>
       <LiClose>
-        <Link href="#contacts" scroll={true} className={s.menuLink}>
+        <Link href="/#contacts" scroll={true} className={s.menuLink}>
           Контакты
         </Link>
       </LiClose>

@@ -15,7 +15,7 @@ export const Region = ({ visible = false, className, withDescription }: RegionPr
   >
     {withDescription && <p className={s.text} style={{ width: '100%' }}>Мы работаем в:</p>}
     <div className="row">
-      <Image src={visible ? 'geo-white.svg' : 'geo.svg'} alt="Регион" width={24} height={24} />
+      <Image unoptimized src={visible ? '/geo-white.svg' : '/geo.svg'} alt="Регион" width={24} height={24} />
       <p itemProp="addressLocality" className={cn(s.text, { [s['bold-text']]: withDescription })}>Ростов-на-Дону, Батайск, Аксай</p>
     </div>
   </div>

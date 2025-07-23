@@ -18,7 +18,7 @@ export const QuestionAnswer = ({ question, answer }: QuestionAnswerProps) => {
       <div className={cn(s.questionWrapper, 'row')} onClick={() => setOpen(prev => !prev)}>
         <p className={s.questionText}>{question}</p>
         <div className={cn(s.imageWrapper, {[s.open]: isOpen})}>
-          <Image src='/plus.svg' alt="" width={12} height={12}/>
+          <Image unoptimized src='/plus.svg' alt="" width={12} height={12}/>
         </div>
       </div>
 
