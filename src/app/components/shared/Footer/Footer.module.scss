@@ -52,5 +52,11 @@
         justify-content: space-between;
       }
     }
+
+    .codeCake {
+      @include laptop {
+        margin-top: 6px;
+      }
+    }
   }
 }

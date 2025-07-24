@@ -15,7 +15,7 @@ export const Footer = () => (
           Политика конфиденциальности
         </a>
       </div>
-      <div className="developer-credits">
+      <div className={s.codeCake}>
         <a href="https://t.me/konstankk" target="_blank" rel="noopener"
            aria-label="Ссылка на контакт разработчика (откроется в новой вкладке)">
           <Image unoptimized src="/codecake.svg" alt="Разработано в CODECAKE" width={235} height={37}/>
